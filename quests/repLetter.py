@@ -25,8 +25,9 @@ string = 'Intergalactic'
 repCount(string)
 """
 
-print('min time: ', min(timeit.repeat(stmt=tcode, repeat=10)), 'second')
-print('max time: ', max(timeit.repeat(stmt=tcode, repeat=10)), 'second')
+time_comp = timeit.repeat(stmt=tcode, repeat=10)
+print('min time: ', min(time_comp), 'second')
+print('max time: ', max(time_comp), 'second')
 
 # Space complexity:
-print('space usage: ', sys.getsizeof(result), 'bytes')
+print('space usage: ', sys.getsizeof(result) + sys.getsizeof(string), 'bytes')
